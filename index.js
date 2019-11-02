@@ -18,8 +18,6 @@ app.use(function (req, res, next) {
 
 app.use(cors());
 
-app.use(express.static('assets'));
-
 app.get('/api/vtt', function (req, res) {
   const data = fs.readFileSync('assets/demo.vtt');
   vttToJson(data.toString())
