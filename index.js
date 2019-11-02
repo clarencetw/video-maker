@@ -18,12 +18,11 @@ app.use(function (req, res, next) {
 
 app.use(cors());
 
+// open file use http://127.0.0.1:8000/api/video/playlist.m3u8
+app.use('/api/video', express.static(path.join(__dirname, 'assets', 'stream')));
+
 app.get('/api/vtt', function (req, res) {
   return res.sendFile('assets/demo.vtt');
-});
-
-app.get('/api/video', function (req, res) {
-  return res.sendFile('assets/stream/playlist.m3u8');
 });
 
 app.get('/video', function (req, res) {
