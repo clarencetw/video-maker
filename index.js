@@ -19,14 +19,11 @@ app.use(function (req, res, next) {
 app.use(cors());
 
 app.get('/api/vtt', function (req, res) {
-  const data = fs.readFileSync('assets/demo.vtt');
-  vttToJson(data.toString())
-    .then(data => res.send(data));
+  return res.sendFile('assets/demo.vtt');
 });
 
 app.get('/api/video', function (req, res) {
-  const content = fs.readFileSync('assets/stream/playlist.m3u8', {encoding: 'utf-8'});
-  res.send(content);
+  return res.sendFile('assets/stream/playlist.m3u8');
 });
 
 app.get('/video', function (req, res) {
