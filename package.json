@@ -1,0 +1,30 @@
+{
+  "name": "video-maker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd video-react && npm run start",
+    "server": "nodemon index.js",
+    "dev": "concurrently --kill-others \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "m3u8-file-parser": "^0.2.2",
+    "m3u8stream": "^0.6.2",
+    "npm": "^6.12.1",
+    "path": "^0.12.7",
+    "vtt-to-json": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
